@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgb(0, 0, 0);
     position: fixed;
     top: 0;
     left: 0;
@@ -77,20 +77,24 @@ body {
 
 /* Gameplay Overview 核心樣式 */
 .gameplay-overview {
-    padding: 100px 20px; /* 添加內邊距確保內容不擁擠 */
-    background-color: #fff; /* 背景設為白色以區分其他區域 */
+    width: 100%; /* 設置寬度為100%，填滿整個畫面 */
+    padding: 50px 20px; /* 添加適當的內邊距，避免內容緊貼邊緣 */
+    background-color: #fff; /* 背景設為白色 */
     color: #333; /* 使用深灰色文字 */
     text-align: center; /* 文字居中 */
+    box-sizing: border-box; /* 確保內邊距計算在寬度內 */
+    margin-top: 10px;
 }
 
+
 .gameplay-overview h2 {
-    font-size: 3rem;
+    font-size: 50px;
     margin-bottom: 20px;
     color: #c0392b; /* 顯示醒目的標題顏色 */
 }
 
 .gameplay-overview p {
-    font-size: 1.2rem;
+    font-size: 25px;
     margin-bottom: 40px;
 }
 
@@ -121,4 +125,25 @@ body {
 .feature p {
     font-size: 1rem;
     color: #666;
+}
+
+/* Gameplay Overview 核心樣式 */
+.gameplay-hightlight {
+    width: 100%; /* 設置寬度為100%，填滿整個畫面 */
+    padding: 50px 20px; /* 添加適當的內邊距，避免內容緊貼邊緣 */
+    background-color: #fff; /* 背景設為白色 */
+    color: #333; /* 使用深灰色文字 */
+    text-align: center; /* 文字居中 */
+    box-sizing: border-box; /* 確保內邊距計算在寬度內 */
+}
+
+.gameplay-hightlight h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #c0392b; /* 顯示醒目的標題顏色 */
+}
+
+.gameplay-hightlight p{
+    font-size: 25px;
+    margin-bottom: 40px;
 }
