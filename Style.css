@@ -60,13 +60,13 @@ body {
     text-decoration: none;
 }
 .circle-container {
-    width: 600px; /* 圓形的直徑 */
-    height: 600px; /* 圓形的直徑 */
-    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* 圓形的背景漸變色 */
-    border-radius: 50%; /* 讓容器變成圓形 */
-    display: flex; /* 使用Flexbox對齊 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    width: 600px; 
+    height: 600px; 
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     overflow: hidden; 
 }
 .circle-container img {
@@ -75,14 +75,14 @@ body {
     height: auto; 
 }
 
-/* Gameplay Overview 核心樣式 */
+/*Gameplay Overview*/
 .gameplay-overview {
-    width: 100%; /* 設置寬度為100%，填滿整個畫面 */
-    padding: 50px 20px; /* 添加適當的內邊距，避免內容緊貼邊緣 */
-    background-color: #fff; /* 背景設為白色 */
-    color: #333; /* 使用深灰色文字 */
-    text-align: center; /* 文字居中 */
-    box-sizing: border-box; /* 確保內邊距計算在寬度內 */
+    width: 100%; 
+    padding: 50px 20px; 
+    background-color: #fff; 
+    color: #333; 
+    text-align: center; 
+    box-sizing: border-box; 
     margin-top: 10px;
 }
 
@@ -90,7 +90,7 @@ body {
 .gameplay-overview h2 {
     font-size: 50px;
     margin-bottom: 20px;
-    color: #c0392b; /* 顯示醒目的標題顏色 */
+    color: #c0392b;
 }
 
 .gameplay-overview p {
@@ -101,8 +101,8 @@ body {
 .features {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* 讓內容居中 */
-    gap: 20px; /* 添加間距 */
+    justify-content: center; 
+    gap: 20px; 
 }
 
 .feature {
@@ -127,20 +127,20 @@ body {
     color: #666;
 }
 
-/* Gameplay Overview 核心樣式 */
+/* Gameplay Overview */
 .gameplay-hightlight {
-    width: 100%; /* 設置寬度為100%，填滿整個畫面 */
-    padding: 50px 20px; /* 添加適當的內邊距，避免內容緊貼邊緣 */
-    background-color: #fff; /* 背景設為白色 */
-    color: #333; /* 使用深灰色文字 */
-    text-align: center; /* 文字居中 */
-    box-sizing: border-box; /* 確保內邊距計算在寬度內 */
+    width: 100%; 
+    padding: 50px 20px; 
+    background-color: #fff; 
+    color: #333; 
+    text-align: center; 
+    box-sizing: border-box; 
 }
 
 .gameplay-hightlight h2 {
     font-size: 50px;
     margin-bottom: 20px;
-    color: #c0392b; /* 顯示醒目的標題顏色 */
+    color: #c0392b; 
 }
 
 .gameplay-hightlight p{
