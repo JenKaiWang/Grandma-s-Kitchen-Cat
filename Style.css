@@ -18,6 +18,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100; /* 確保標頭位於最上層 */
 }
 .navbar a {
     color: white;
@@ -60,13 +61,13 @@ body {
     text-decoration: none;
 }
 .circle-container {
-    width: 600px; 
-    height: 600px; 
-    background: linear-gradient(to right, #ff9a9e, #fad0c4); 
-    border-radius: 50%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    width: 600px; /* 圓形的直徑 */
+    height: 600px; /* 圓形的直徑 */
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* 圓形的背景漸變色 */
+    border-radius: 50%; /* 讓容器變成圓形 */
+    display: flex; /* 使用Flexbox對齊 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
     overflow: hidden; 
 }
 .circle-container img {
@@ -75,75 +76,203 @@ body {
     height: auto; 
 }
 
-/*Gameplay Overview*/
+/* Gameplay Overview 核心樣式 */
 .gameplay-overview {
-    width: 100%; 
-    padding: 50px 20px; 
-    background-color: #fff; 
-    color: #333; 
-    text-align: center; 
-    box-sizing: border-box; 
-    margin-top: 10px;
+    width: 100%;
+    padding: 50px 20px;
+    background-color: pink;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 20px;
 }
 
+.gameplay-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+}
+
+/* 左側文字區域 */
+.gameplay-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    margin-left: 165px;
+}
 
 .gameplay-overview h2 {
     font-size: 50px;
     margin-bottom: 20px;
-    color: #c0392b;
+    color: #c0392b; /* 顯示醒目的標題顏色 */
 }
 
-.gameplay-overview p {
+.gameplay-text p {
     font-size: 25px;
-    margin-bottom: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.features {
+.gameplay-text ul {
+    list-style: decimal;
+    margin-left: 20px;
+    color: #333;
+}
+
+.gameplay-text li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* 右側圖片輪播區域 */
+.image-carousel {
+    flex: 1;
+    max-width: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 50s infinite; /* 動畫設定，每12秒完成一次輪播 */
+    width: 300px; /* 確保所有圖片橫向排列 */
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* 確保圖片按比例顯示 */
+    flex: 1 0 100%; /* 每個圖片占容器寬度 */
+    display: block;
+}
+
+/* 定義輪播動畫 */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+
+/* QA */
+.QA{
+    text-align: center; /* 文字居中 */
+    width: 100%;
+    background: pink;
+}
+
+.QA h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #c0392b; /* 顯示醒目的標題顏色 */
+}
+
+.QA-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
-    gap: 20px; 
+    justify-content: center; /* 讓內容居中 */
+    gap: 20px; /* 添加間距 */
 }
 
-.feature {
-    width: 250px;
+.QA-card {
+    width: 400px;
     text-align: center;
 }
 
-.feature img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+.QA-card h5 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
 }
 
-.feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #8e44ad;
-}
-
-.feature p {
-    font-size: 1rem;
+.QA-card p {
+    font-weight: bold;
+    font-size: 20px;
     color: #666;
 }
 
-/* Gameplay Overview */
-.gameplay-hightlight {
-    width: 100%; 
-    padding: 50px 20px; 
-    background-color: #fff; 
-    color: #333; 
-    text-align: center; 
-    box-sizing: border-box; 
+
+/* Footer 核心樣式 */
+.Footer {
+    width: 100%; /* 設置寬度為100%，填滿整個畫面 */
+    padding: 50px 20px; /* 添加適當的內邊距，避免內容緊貼邊緣 */
+    background-color: #fff; /* 背景設為白色 */
+    color: #333; /* 使用深灰色文字 */
+    text-align: center; /* 文字居中 */
+    box-sizing: border-box; /* 確保內邊距計算在寬度內 */
+    background: pink;
 }
 
-.gameplay-hightlight h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #c0392b; 
+.Links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 讓內容居中 */
+    gap: 20px; /* 添加間距 */
+    margin-top: 10px;
 }
 
-.gameplay-hightlight p{
-    font-size: 25px;
-    margin-bottom: 40px;
+.Link {
+    width: 150px;
+    background: pink;
+}
+
+.Link img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Media Query */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar a {
+        margin: 10px 0;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 150px;
+    }
+    .text-section {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+    .text-section h1 {
+font-size: 3rem;
+    }
+    .text-section p {
+        font-size: 1rem;
+    }
+    .circle-container {
+        width: 300px;
+        height: 300px;
+    }
+    .circle-container img {
+        width: 150px;
+    }
+    .gameplay-overview, .gameplay-hightlight {
+        padding: 20px;
+    }
+    .gameplay-overview h2, .gameplay-hightlight h2 {
+        font-size: 2rem;
+    }
+    .gameplay-overview p, .gameplay-hightlight p {
+        font-size: 1rem;
+    }
+    .features {
+        flex-direction: col
+    }
 }
