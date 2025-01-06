@@ -108,8 +108,8 @@ body {
     color: #c0392b; /* 顯示醒目的標題顏色 */
 }
 
-.gameplay-text p {
-    font-size: 25px;
+.gameplay-text h5 {
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -121,21 +121,25 @@ body {
 }
 
 .gameplay-text li {
-    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: 20px;
+    color: #666;
     margin-bottom: 10px;
 }
 
 /* 右側圖片輪播區域 */
 .image-carousel {
     flex: 1;
-    max-width: auto;
+    width: 100%;
     overflow: hidden;
     position: relative;
+    margin-left: -50px;
+    margin-right: 50px;
 }
 
 .carousel {
     display: flex;
-    animation: slide 50s infinite; /* 動畫設定，每12秒完成一次輪播 */
+    animation: slide linear 50s infinite; /* 動畫設定，每12秒完成一次輪播 */
     width: 300px; /* 確保所有圖片橫向排列 */
 }
 
@@ -149,10 +153,18 @@ body {
 
 /* 定義輪播動畫 */
 @keyframes slide {
-    0% { transform: translateX(0%); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0%); }
+    0% {
+        transform: translateX(0); /* 第一張圖片 */
+    }
+    33.33% {
+        transform: translateX(-100%); /* 第二張圖片 */
+    }
+    66.66% {
+        transform: translateX(-200%); /* 第三張圖片 */
+    }
+    100% {
+        transform: translateX(-300%); /* 返回到克隆的第一張 */
+    }
 }
 
 
